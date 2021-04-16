@@ -16,3 +16,10 @@ class BasePage():
         except NoSuchElementException:
             return False
         return True
+
+    def url_contain_text(self, txt):
+        url = self.browser.current_url
+        if txt in url:
+            return True
+        else:
+            return False
